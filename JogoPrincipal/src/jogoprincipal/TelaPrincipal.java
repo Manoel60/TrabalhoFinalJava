@@ -44,7 +44,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel2.setBackground(new java.awt.Color(0, 153, 255));
+        jPanel2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
+        jButton4.setBackground(new java.awt.Color(0, 204, 255));
         jButton4.setText("Menu");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -52,7 +54,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jButton5.setBackground(new java.awt.Color(0, 204, 255));
+        jButton5.setForeground(new java.awt.Color(51, 51, 51));
         jButton5.setText("Sair");
+        jButton5.setBorder(null);
+        jButton5.setBorderPainted(false);
+        jButton5.setFocusPainted(false);
+        jButton5.setOpaque(false);
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -66,7 +74,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(38, 38, 38)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 421, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 419, Short.MAX_VALUE)
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40))
         );
@@ -94,10 +102,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.ipadx = 24;
+        gridBagConstraints.ipadx = 12;
         gridBagConstraints.ipady = 20;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(49, 245, 0, 283);
+        gridBagConstraints.insets = new java.awt.Insets(18, 245, 0, 295);
         jPanel1.add(conMaq, gridBagConstraints);
 
         conDes.setText("Contra o Desafiante");
@@ -109,9 +117,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = 12;
+        gridBagConstraints.ipady = 18;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(166, 245, 0, 283);
+        gridBagConstraints.insets = new java.awt.Insets(48, 245, 0, 295);
         jPanel1.add(conDes, gridBagConstraints);
 
         jButton3.setText("Desafiar");
@@ -123,10 +131,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
-        gridBagConstraints.ipadx = 68;
+        gridBagConstraints.ipadx = 56;
         gridBagConstraints.ipady = 37;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(33, 245, 33, 283);
+        gridBagConstraints.insets = new java.awt.Insets(18, 245, 156, 295);
         jPanel1.add(jButton3, gridBagConstraints);
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
@@ -134,7 +142,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Edit");
+        jMenu2.setText("Sobre");
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -171,6 +179,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         Tela = new ContraMaq();
         add(Tela);
         Tela.setVisible(true);
+        
     }//GEN-LAST:event_conDesActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -209,6 +218,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new TelaPrincipal().setVisible(true);
+                
+                
             }
         });
     }
