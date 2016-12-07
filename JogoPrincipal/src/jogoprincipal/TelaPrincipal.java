@@ -34,8 +34,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        conMaq = new javax.swing.JButton();
+        conDes = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -53,6 +53,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
 
         jButton5.setText("Sair");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -80,10 +85,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(51, 255, 204));
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
-        jButton1.setText("Contra a Maquina");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        conMaq.setText("Contra a Maquina");
+        conMaq.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                conMaqActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -93,16 +98,21 @@ public class TelaPrincipal extends javax.swing.JFrame {
         gridBagConstraints.ipady = 20;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(49, 245, 0, 283);
-        jPanel1.add(jButton1, gridBagConstraints);
+        jPanel1.add(conMaq, gridBagConstraints);
 
-        jButton2.setText("Contra o Desafiante");
+        conDes.setText("Contra o Desafiante");
+        conDes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                conDesActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.ipadx = 12;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(166, 245, 0, 283);
-        jPanel1.add(jButton2, gridBagConstraints);
+        jPanel1.add(conDes, gridBagConstraints);
 
         jButton3.setText("Desafiar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -132,14 +142,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void conMaqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conMaqActionPerformed
         // TODO add your handling code here:
         jPanel1.setVisible(false);
         Tela = new ContraMaq();
         add(Tela);
         Tela.setVisible(true);
        
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_conMaqActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
@@ -154,6 +164,19 @@ public class TelaPrincipal extends javax.swing.JFrame {
         add(Tela);
         Tela.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void conDesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conDesActionPerformed
+        // TODO add your handling code here:
+        jPanel1.setVisible(false);
+        Tela = new ContraMaq();
+        add(Tela);
+        Tela.setVisible(true);
+    }//GEN-LAST:event_conDesActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -191,8 +214,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
     private JPanel Tela;
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton conDes;
+    private javax.swing.JButton conMaq;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
