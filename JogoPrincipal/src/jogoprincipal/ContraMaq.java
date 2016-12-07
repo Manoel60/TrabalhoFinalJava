@@ -35,11 +35,11 @@ public class ContraMaq extends javax.swing.JPanel implements Escolha{
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        papel = new javax.swing.JLabel();
+        pedra = new javax.swing.JLabel();
+        lagarto = new javax.swing.JLabel();
+        spock = new javax.swing.JLabel();
+        tesoura = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
 
         jPanel1.setBackground(new java.awt.Color(255, 153, 153));
@@ -51,13 +51,13 @@ public class ContraMaq extends javax.swing.JPanel implements Escolha{
         jPanel3.setBackground(new java.awt.Color(0, 204, 204));
         jPanel3.setLayout(new java.awt.GridBagLayout());
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/pp1.png"))); // NOI18N
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+        papel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/pp1.png"))); // NOI18N
+        papel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel2MouseEntered(evt);
+                papelMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel2MouseExited(evt);
+                papelMouseExited(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -65,18 +65,18 @@ public class ContraMaq extends javax.swing.JPanel implements Escolha{
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(18, 57, 0, 10);
-        jPanel3.add(jLabel2, gridBagConstraints);
+        jPanel3.add(papel, gridBagConstraints);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/p_1.png"))); // NOI18N
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        pedra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/p_1.png"))); // NOI18N
+        pedra.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
+                pedraMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel1MouseEntered(evt);
+                pedraMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel1MouseExited(evt);
+                pedraMouseExited(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -84,15 +84,15 @@ public class ContraMaq extends javax.swing.JPanel implements Escolha{
         gridBagConstraints.gridy = 0;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(11, 50, 0, 0);
-        jPanel3.add(jLabel1, gridBagConstraints);
+        jPanel3.add(pedra, gridBagConstraints);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/lg1.png"))); // NOI18N
-        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+        lagarto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/lg1.png"))); // NOI18N
+        lagarto.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel5MouseEntered(evt);
+                lagartoMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel5MouseExited(evt);
+                lagartoMouseExited(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -100,15 +100,15 @@ public class ContraMaq extends javax.swing.JPanel implements Escolha{
         gridBagConstraints.gridy = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 50, 47, 0);
-        jPanel3.add(jLabel5, gridBagConstraints);
+        jPanel3.add(lagarto, gridBagConstraints);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/sp1.png"))); // NOI18N
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+        spock.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/sp1.png"))); // NOI18N
+        spock.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel4MouseEntered(evt);
+                spockMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel4MouseExited(evt);
+                spockMouseExited(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -116,15 +116,15 @@ public class ContraMaq extends javax.swing.JPanel implements Escolha{
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(18, 50, 0, 0);
-        jPanel3.add(jLabel4, gridBagConstraints);
+        jPanel3.add(spock, gridBagConstraints);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/t1.png"))); // NOI18N
-        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+        tesoura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/t1.png"))); // NOI18N
+        tesoura.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel3MouseEntered(evt);
+                tesouraMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel3MouseExited(evt);
+                tesouraMouseExited(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -132,7 +132,7 @@ public class ContraMaq extends javax.swing.JPanel implements Escolha{
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(18, 32, 0, 0);
-        jPanel3.add(jLabel3, gridBagConstraints);
+        jPanel3.add(tesoura, gridBagConstraints);
 
         jPanel1.add(jPanel3, java.awt.BorderLayout.CENTER);
 
@@ -152,61 +152,61 @@ public class ContraMaq extends javax.swing.JPanel implements Escolha{
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseEntered
+    private void pedraMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pedraMouseEntered
         // TODO add your handling code here:
-        jLabel1.setIcon(img2);
-    }//GEN-LAST:event_jLabel1MouseEntered
+        pedra.setIcon(img2);
+    }//GEN-LAST:event_pedraMouseEntered
 
-    private void jLabel1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseExited
+    private void pedraMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pedraMouseExited
         // TODO add your handling code here:
-        jLabel1.setIcon(img1);
-    }//GEN-LAST:event_jLabel1MouseExited
+        pedra.setIcon(img1);
+    }//GEN-LAST:event_pedraMouseExited
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+    private void pedraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pedraMouseClicked
         // TODO add your handling code here:
         javax.swing.JOptionPane.showMessageDialog(null,"Pedra selecionada");
         escolha =1;
-    }//GEN-LAST:event_jLabel1MouseClicked
+    }//GEN-LAST:event_pedraMouseClicked
 
-    private void jLabel2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseEntered
+    private void papelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_papelMouseEntered
         // Quando o mouse entrar na area do label
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/pp2.png")));
-    }//GEN-LAST:event_jLabel2MouseEntered
+        papel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/pp2.png")));
+    }//GEN-LAST:event_papelMouseEntered
 
-    private void jLabel2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseExited
+    private void papelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_papelMouseExited
         // TODO add your handling code here:
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/pp1.png")));
-    }//GEN-LAST:event_jLabel2MouseExited
+        papel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/pp1.png")));
+    }//GEN-LAST:event_papelMouseExited
 
-    private void jLabel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseEntered
+    private void tesouraMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tesouraMouseEntered
         // TODO add your handling code here:
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/t2.png")));
-    }//GEN-LAST:event_jLabel3MouseEntered
+        tesoura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/t2.png")));
+    }//GEN-LAST:event_tesouraMouseEntered
 
-    private void jLabel3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseExited
+    private void tesouraMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tesouraMouseExited
         // TODO add your handling code here:
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/t1.png")));
-    }//GEN-LAST:event_jLabel3MouseExited
+        tesoura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/t1.png")));
+    }//GEN-LAST:event_tesouraMouseExited
 
-    private void jLabel4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseEntered
+    private void spockMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_spockMouseEntered
         // TODO add your handling code here:
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/sp2.png")));
-    }//GEN-LAST:event_jLabel4MouseEntered
+        spock.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/sp2.png")));
+    }//GEN-LAST:event_spockMouseEntered
 
-    private void jLabel4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseExited
+    private void spockMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_spockMouseExited
         // TODO add your handling code here:
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/sp1.png")));
-    }//GEN-LAST:event_jLabel4MouseExited
+        spock.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/sp1.png")));
+    }//GEN-LAST:event_spockMouseExited
 
-    private void jLabel5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseEntered
+    private void lagartoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lagartoMouseEntered
         // TODO add your handling code here:
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/lg2.png")));
-    }//GEN-LAST:event_jLabel5MouseEntered
+        lagarto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/lg2.png")));
+    }//GEN-LAST:event_lagartoMouseEntered
 
-    private void jLabel5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseExited
+    private void lagartoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lagartoMouseExited
         // TODO add your handling code here:
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/lg1.png")));
-    }//GEN-LAST:event_jLabel5MouseExited
+        lagarto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/lg1.png")));
+    }//GEN-LAST:event_lagartoMouseExited
     public int escolha()
     {
         int escolhaDaMaq =(1 + random.nextInt(5));
@@ -221,14 +221,14 @@ public class ContraMaq extends javax.swing.JPanel implements Escolha{
     private Icon img2 = new ImageIcon(getClass().getResource("/iMAGES/p_2.png"));
     private Icon img1 = new ImageIcon(getClass().getResource("/iMAGES/p_1.png"));
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JLabel lagarto;
+    private javax.swing.JLabel papel;
+    private javax.swing.JLabel pedra;
+    private javax.swing.JLabel spock;
+    private javax.swing.JLabel tesoura;
     // End of variables declaration//GEN-END:variables
 }

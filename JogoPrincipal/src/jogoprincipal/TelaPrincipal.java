@@ -161,7 +161,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        Tela.setVisible(false);
+        //Tela.setVisible(false);
+        remove(Tela);
         jPanel1.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -219,9 +220,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
             public void run() {
                 new TelaPrincipal().setVisible(true);
                 
-                
+               
             }
         });
+        
+        
     }
     private JPanel Tela;
     // Variables declaration - do not modify//GEN-BEGIN:variables
