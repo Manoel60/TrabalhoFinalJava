@@ -14,7 +14,8 @@ import javax.swing.JPanel;
  */
 public class ConfrontMaqJog extends JPanel implements Escolha{
     Random escRand = new Random();
-    int escMaq = (1 + escRand.nextInt(5));
+    
+    //Constante para facilitar 
     private static final int PEDRA=1,
                              PAPEL=2,
                              TESOURA=3,
@@ -22,19 +23,22 @@ public class ConfrontMaqJog extends JPanel implements Escolha{
                              LAGARTO=5;
     @Override
     public String[] escolha(int escolhaJog) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    
-        String resul[] = new String[2];
+        
+        int escMaq = (1 + escRand.nextInt(5));
+        String resul[] = new String[3];
         switch(escMaq)
         {
             case PEDRA:
             {
                 if(escolhaJog == TESOURA || escolhaJog == LAGARTO )
                 {
-                    resul[0]= "Perdeu";                    
+                    resul[0]= "Perdeu";  
+                    resul[2]="1";
                 }else if(escolhaJog == PAPEL || escolhaJog == SPOCK)
                 {
                     resul[0] ="Ganhou!!";
+                    //Essa informação ira sercir para contar os pontos
+                    resul[2]="2";
                 }
                 resul[1] = ("Pedra");
                 break;
@@ -43,10 +47,12 @@ public class ConfrontMaqJog extends JPanel implements Escolha{
                 if(escolhaJog == SPOCK || escolhaJog == PEDRA )
                 {
                     resul[0]= "Perdeu";
+                    resul[2]="1";
                     
                 }else if(escolhaJog == TESOURA || escolhaJog == LAGARTO)
                 {
                     resul[0] ="Ganhou!!";                    
+                    resul[2]="2";
                 }
                 resul[1] = "Papel";
                 break;
@@ -55,9 +61,11 @@ public class ConfrontMaqJog extends JPanel implements Escolha{
                 if(escolhaJog == PAPEL || escolhaJog == LAGARTO )
                 {
                     resul[0]= "Perdeu";
+                    resul[2]="1";
                 }else if(escolhaJog == PEDRA || escolhaJog == SPOCK)
                 {
                     resul[0] ="Ganhou!!";
+                    resul[2]="2";
                    
                 }
                 resul[1] = "Tesoura";
@@ -67,10 +75,12 @@ public class ConfrontMaqJog extends JPanel implements Escolha{
                 if(escolhaJog == PEDRA || escolhaJog == TESOURA )
                 {
                     resul[0]= "Perdeu";
+                    resul[2]="1";
                    
                 }else if(escolhaJog == PAPEL || escolhaJog == LAGARTO)
                 {
                     resul[0] ="Ganhou!!";
+                    resul[2]="2";
                     
                 }
                 resul[1] = "SPOOK!";
@@ -80,10 +90,12 @@ public class ConfrontMaqJog extends JPanel implements Escolha{
                 if(escolhaJog == SPOCK || escolhaJog == PAPEL )
                 {
                     resul[0]= "Perdeu";
+                    resul[2]="1";
                     
                 }else if(escolhaJog == PEDRA || escolhaJog == TESOURA)
                 {
                     resul[0] ="Ganhou!!";
+                    resul[2]="2";
                     
                 }
                 resul[1] = "Lagarto";
@@ -93,14 +105,9 @@ public class ConfrontMaqJog extends JPanel implements Escolha{
         if(escolhaJog == escMaq)
         {
             resul[0]= "Empate";
+            resul[2]="0";
         }
         return resul;
     }
-
-    @Override
-    public void escDeJog(int j) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
     
 }

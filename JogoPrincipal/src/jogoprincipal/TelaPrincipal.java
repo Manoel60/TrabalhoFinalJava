@@ -30,13 +30,25 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
+        quadro2 = new javax.swing.JFrame();
         jPanel2 = new javax.swing.JPanel();
         Menu = new javax.swing.JButton();
         sair = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         conMaq = new javax.swing.JButton();
-        conDes = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        modoDesafiante = new javax.swing.JButton();
+        modoDesafiar = new javax.swing.JButton();
+
+        javax.swing.GroupLayout quadro2Layout = new javax.swing.GroupLayout(quadro2.getContentPane());
+        quadro2.getContentPane().setLayout(quadro2Layout);
+        quadro2Layout.setHorizontalGroup(
+            quadro2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        quadro2Layout.setVerticalGroup(
+            quadro2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -111,13 +123,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(46, 115, 0, 113);
         jPanel1.add(conMaq, gridBagConstraints);
 
-        conDes.setBackground(new java.awt.Color(102, 102, 255));
-        conDes.setFont(new java.awt.Font("Vineta BT", 2, 14)); // NOI18N
-        conDes.setForeground(new java.awt.Color(51, 204, 255));
-        conDes.setText("Contra o Desafiante");
-        conDes.addActionListener(new java.awt.event.ActionListener() {
+        modoDesafiante.setBackground(new java.awt.Color(102, 102, 255));
+        modoDesafiante.setFont(new java.awt.Font("Vineta BT", 2, 14)); // NOI18N
+        modoDesafiante.setForeground(new java.awt.Color(51, 204, 255));
+        modoDesafiante.setText("Contra o Desafiante");
+        modoDesafiante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                conDesActionPerformed(evt);
+                modoDesafianteActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -127,15 +139,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
         gridBagConstraints.ipady = 18;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(60, 109, 0, 113);
-        jPanel1.add(conDes, gridBagConstraints);
+        jPanel1.add(modoDesafiante, gridBagConstraints);
 
-        jButton3.setBackground(new java.awt.Color(102, 102, 255));
-        jButton3.setFont(new java.awt.Font("Vineta BT", 2, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(51, 204, 255));
-        jButton3.setText("Desafiar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        modoDesafiar.setBackground(new java.awt.Color(102, 102, 255));
+        modoDesafiar.setFont(new java.awt.Font("Vineta BT", 2, 14)); // NOI18N
+        modoDesafiar.setForeground(new java.awt.Color(51, 204, 255));
+        modoDesafiar.setText("Desafiar");
+        modoDesafiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                modoDesafiarActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -145,7 +157,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         gridBagConstraints.ipady = 35;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(65, 115, 99, 113);
-        jPanel1.add(jButton3, gridBagConstraints);
+        jPanel1.add(modoDesafiar, gridBagConstraints);
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
@@ -161,22 +173,22 @@ public class TelaPrincipal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_conMaqActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void modoDesafiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modoDesafiarActionPerformed
         // TODO add your handling code here:
         Tela = new Desafiar();
         jPanel1.setVisible(false);
         add(Tela);
         Tela.setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_modoDesafiarActionPerformed
     
-    private void conDesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conDesActionPerformed
+    private void modoDesafianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modoDesafianteActionPerformed
         // TODO add your handling code here:
         jPanel1.setVisible(false);
         Tela = new Contra(new ConfrontDesJog());
         add(Tela);
         Tela.setVisible(true);
         
-    }//GEN-LAST:event_conDesActionPerformed
+    }//GEN-LAST:event_modoDesafianteActionPerformed
 
     private void sairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairActionPerformed
         // TODO add your handling code here:
@@ -234,11 +246,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private JPanel Tela;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Menu;
-    private javax.swing.JButton conDes;
     private javax.swing.JButton conMaq;
-    private javax.swing.JButton jButton3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JButton modoDesafiante;
+    private javax.swing.JButton modoDesafiar;
+    private javax.swing.JFrame quadro2;
     private javax.swing.JButton sair;
     // End of variables declaration//GEN-END:variables
 }
