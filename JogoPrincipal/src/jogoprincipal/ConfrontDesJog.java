@@ -9,8 +9,10 @@ package jogoprincipal;
  *
  * @author Manoel
  */
-public interface Escolha {
-    
-    public String[] escolha(int x);
+public class ConfrontDesJog implements Escolha {
+    @Override
+    public String[] escolha(int x) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
