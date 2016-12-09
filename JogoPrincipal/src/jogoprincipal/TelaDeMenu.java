@@ -34,7 +34,7 @@ public class TelaDeMenu extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         Menu = new javax.swing.JButton();
         sair = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        jMenu = new javax.swing.JPanel();
         conMaq = new javax.swing.JButton();
         modoDesafiante = new javax.swing.JButton();
         modoDesafiar = new javax.swing.JButton();
@@ -102,8 +102,8 @@ public class TelaDeMenu extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.WEST);
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
-        jPanel1.setLayout(new java.awt.GridBagLayout());
+        jMenu.setBackground(new java.awt.Color(0, 153, 153));
+        jMenu.setLayout(new java.awt.GridBagLayout());
 
         conMaq.setBackground(new java.awt.Color(102, 102, 255));
         conMaq.setFont(new java.awt.Font("Vineta BT", 2, 14)); // NOI18N
@@ -121,7 +121,7 @@ public class TelaDeMenu extends javax.swing.JFrame {
         gridBagConstraints.ipady = 20;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(46, 115, 0, 113);
-        jPanel1.add(conMaq, gridBagConstraints);
+        jMenu.add(conMaq, gridBagConstraints);
 
         modoDesafiante.setBackground(new java.awt.Color(102, 102, 255));
         modoDesafiante.setFont(new java.awt.Font("Vineta BT", 2, 14)); // NOI18N
@@ -139,7 +139,7 @@ public class TelaDeMenu extends javax.swing.JFrame {
         gridBagConstraints.ipady = 18;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(60, 109, 0, 113);
-        jPanel1.add(modoDesafiante, gridBagConstraints);
+        jMenu.add(modoDesafiante, gridBagConstraints);
 
         modoDesafiar.setBackground(new java.awt.Color(102, 102, 255));
         modoDesafiar.setFont(new java.awt.Font("Vineta BT", 2, 14)); // NOI18N
@@ -157,16 +157,16 @@ public class TelaDeMenu extends javax.swing.JFrame {
         gridBagConstraints.ipady = 35;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(65, 115, 99, 113);
-        jPanel1.add(modoDesafiar, gridBagConstraints);
+        jMenu.add(modoDesafiar, gridBagConstraints);
 
-        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
+        getContentPane().add(jMenu, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void conMaqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conMaqActionPerformed
         // TODO add your handling code here:
-        jPanel1.setVisible(false);
+        jMenu.setVisible(false);
         Tela = new TelaDeJogo(new ContraMaquina());
         add(Tela);
         Tela.setVisible(true);
@@ -176,14 +176,14 @@ public class TelaDeMenu extends javax.swing.JFrame {
     private void modoDesafiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modoDesafiarActionPerformed
         // TODO add your handling code here:
         Tela = new TelaDeDesafio();
-        jPanel1.setVisible(false);
+        jMenu.setVisible(false);
         add(Tela);
         Tela.setVisible(true);
     }//GEN-LAST:event_modoDesafiarActionPerformed
     
     private void modoDesafianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modoDesafianteActionPerformed
         // TODO add your handling code here:
-        jPanel1.setVisible(false);
+        jMenu.setVisible(false);
         Tela = new TelaDeJogo(new ContraDesafiante());
         add(Tela);
         Tela.setVisible(true);
@@ -200,9 +200,9 @@ public class TelaDeMenu extends javax.swing.JFrame {
     private void MenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuActionPerformed
         // TODO add your handling code here:
         Tela.setVisible(false);
-        add(jPanel1);
+        add(jMenu);
         remove(Tela);
-        jPanel1.setVisible(true);
+        jMenu.setVisible(true);
     }//GEN-LAST:event_MenuActionPerformed
 
     /**
@@ -248,7 +248,7 @@ public class TelaDeMenu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Menu;
     private javax.swing.JButton conMaq;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jMenu;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JButton modoDesafiante;
     private javax.swing.JButton modoDesafiar;
