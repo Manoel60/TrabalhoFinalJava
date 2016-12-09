@@ -9,12 +9,12 @@ package jogoprincipal;
  *
  * @author Manoel
  */
-public class Desafiar extends javax.swing.JPanel {
+public class TelaDeDesafio extends javax.swing.JPanel {
 
     /**
      * Creates new form Desafiar
      */
-    public Desafiar() {
+    public TelaDeDesafio() {
         initComponents();
     }
 

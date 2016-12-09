@@ -12,7 +12,7 @@ import javax.swing.JPanel;
  *
  * @author Manoel
  */
-public class ConfrontMaqJog extends JPanel implements Escolha{
+public class ContraMaquina extends JPanel implements ModoDeJogo{
     Random escRand = new Random();
     
     //Constante para facilitar 
@@ -25,7 +25,9 @@ public class ConfrontMaqJog extends JPanel implements Escolha{
     public String[] escolha(int escolhaJog) {
         
         int escMaq = (1 + escRand.nextInt(5));
+        
         String resul[] = new String[3];
+        
         switch(escMaq)
         {
             case PEDRA:

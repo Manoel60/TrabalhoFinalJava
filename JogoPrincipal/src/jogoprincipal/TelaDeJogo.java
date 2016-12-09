@@ -14,13 +14,13 @@ import javax.swing.JTextField;
  *
  * @author Manoel
  */
-public class Contra extends javax.swing.JPanel {
+public class TelaDeJogo extends javax.swing.JPanel {
 
     /**
      * Creates new form ContraMaq
      */
-    public Contra(Escolha esc) {
-        escolha =esc;
+    public TelaDeJogo(ModoDeJogo esc) {
+        escolhaDoJogador =esc;
         initComponents();
     }
 
@@ -265,13 +265,13 @@ public class Contra extends javax.swing.JPanel {
     private void tesouraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tesouraMouseClicked
         // TODO add your handling code here:
         TextJog.setText("Tesoura");
-        escRes = escolha.escolha(3);
-        TextMaq.setText(escRes[1]);
+        respostaDeEscolha = escolhaDoJogador.escolha(3);
+        TextMaq.setText(respostaDeEscolha[1]);
         
         //vamos verificar quem recebe pontos nessa jogada
-        verificaPontos(escRes[2]);
+        verificaPontos(respostaDeEscolha[2]);
         
-        javax.swing.JOptionPane.showMessageDialog(Contra.this,escRes[0]);
+        javax.swing.JOptionPane.showMessageDialog(TelaDeJogo.this,respostaDeEscolha[0]);
     }//GEN-LAST:event_tesouraMouseClicked
 
     private void spockMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_spockMouseExited
@@ -287,14 +287,14 @@ public class Contra extends javax.swing.JPanel {
     private void spockMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_spockMouseClicked
         // TODO add your handling code here:
         TextJog.setText("SPOOK!");
-        escRes = escolha.escolha(4);
-        TextMaq.setText(escRes[1]);
+        respostaDeEscolha = escolhaDoJogador.escolha(4);
+        TextMaq.setText(respostaDeEscolha[1]);
         
         //vamos verificar quem recebe pontos nessa jogada
-        verificaPontos(escRes[2]);
+        verificaPontos(respostaDeEscolha[2]);
         
         //Ira mostrar uma messagem idicando qual foi o resultado da jogada
-        javax.swing.JOptionPane.showMessageDialog(Contra.this,escRes[0]);
+        javax.swing.JOptionPane.showMessageDialog(TelaDeJogo.this,respostaDeEscolha[0]);
       //  resulText.setText(escRes[0]);
     }//GEN-LAST:event_spockMouseClicked
 
@@ -311,13 +311,13 @@ public class Contra extends javax.swing.JPanel {
     private void lagartoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lagartoMouseClicked
         // TODO add your handling code here:
         TextJog.setText("Lagarto");
-        escRes = escolha.escolha(5);
-        TextMaq.setText(escRes[1]);
+        respostaDeEscolha = escolhaDoJogador.escolha(5);
+        TextMaq.setText(respostaDeEscolha[1]);
         
         //vamos verificar quem recebe pontos nessa jogada
-        verificaPontos(escRes[2]);
+        verificaPontos(respostaDeEscolha[2]);
         
-        javax.swing.JOptionPane.showMessageDialog(Contra.this,escRes[0]);
+        javax.swing.JOptionPane.showMessageDialog(TelaDeJogo.this,respostaDeEscolha[0]);
     }//GEN-LAST:event_lagartoMouseClicked
 
     private void pedraMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pedraMouseExited
@@ -333,13 +333,13 @@ public class Contra extends javax.swing.JPanel {
     private void pedraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pedraMouseClicked
         // TODO add your handling code here:
         TextJog.setText("Pedra");
-        escRes = escolha.escolha(1);
-        TextMaq.setText(escRes[1]);
+        respostaDeEscolha = escolhaDoJogador.escolha(1);
+        TextMaq.setText(respostaDeEscolha[1]);
         
         //vamos verificar quem recebe pontos nessa jogada
-        verificaPontos(escRes[2]);
+        verificaPontos(respostaDeEscolha[2]);
         
-        javax.swing.JOptionPane.showMessageDialog(Contra.this,escRes[0]);
+        javax.swing.JOptionPane.showMessageDialog(TelaDeJogo.this,respostaDeEscolha[0]);
     }//GEN-LAST:event_pedraMouseClicked
 
     private void papelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_papelMouseExited
@@ -355,18 +355,18 @@ public class Contra extends javax.swing.JPanel {
     private void papelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_papelMouseClicked
         // TODO add your handling code here:
         TextJog.setText("Papel");        
-        escRes = escolha.escolha(2);
-        TextMaq.setText(escRes[1]);
+        respostaDeEscolha = escolhaDoJogador.escolha(2);
+        TextMaq.setText(respostaDeEscolha[1]);
         
         //vamos verificar quem recebe pontos nessa jogada
-        verificaPontos(escRes[2]);
+        verificaPontos(respostaDeEscolha[2]);
         
         //Apresenta o resutado das jogadas
-        javax.swing.JOptionPane.showMessageDialog(Contra.this,escRes[0]);
+        javax.swing.JOptionPane.showMessageDialog(TelaDeJogo.this,respostaDeEscolha[0]);
     }//GEN-LAST:event_papelMouseClicked
    
-    Escolha escolha;
-    String[] escRes;
+    ModoDeJogo escolhaDoJogador;
+    String[] respostaDeEscolha;
     private int scoreP=0, scoreC= 0;
     private Icon img2 = new ImageIcon(getClass().getResource("/iMAGES/p_2.png"));
     private Icon img1 = new ImageIcon(getClass().getResource("/iMAGES/p_1.png"));

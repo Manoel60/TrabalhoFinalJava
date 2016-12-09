@@ -9,7 +9,7 @@ package jogoprincipal;
  *
  * @author Manoel
  */
-public interface Escolha {
+public interface ModoDeJogo {
     
     public String[] escolha(int x);
     

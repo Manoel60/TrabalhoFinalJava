@@ -9,7 +9,7 @@ package jogoprincipal;
  *
  * @author Manoel
  */
-public class ConfrontDesJog implements Escolha {
+public class ContraDesafiante implements ModoDeJogo {
     @Override
     public String[] escolha(int x) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
