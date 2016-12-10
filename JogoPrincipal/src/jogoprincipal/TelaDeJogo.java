@@ -265,13 +265,7 @@ public class TelaDeJogo extends javax.swing.JPanel {
     private void tesouraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tesouraMouseClicked
         // TODO add your handling code here:
         TextJog.setText("Tesoura");
-        respostaDeEscolha = escolhaDoJogador.escolha(3);
-        TextMaq.setText(respostaDeEscolha[1]);
-        
-        //vamos verificar quem recebe pontos nessa jogada
-        verificaPontos(respostaDeEscolha[2]);
-        
-        javax.swing.JOptionPane.showMessageDialog(TelaDeJogo.this,respostaDeEscolha[0]);
+        processarJogada(3);
     }//GEN-LAST:event_tesouraMouseClicked
 
     private void spockMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_spockMouseExited
@@ -287,15 +281,7 @@ public class TelaDeJogo extends javax.swing.JPanel {
     private void spockMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_spockMouseClicked
         // TODO add your handling code here:
         TextJog.setText("SPOOK!");
-        respostaDeEscolha = escolhaDoJogador.escolha(4);
-        TextMaq.setText(respostaDeEscolha[1]);
-        
-        //vamos verificar quem recebe pontos nessa jogada
-        verificaPontos(respostaDeEscolha[2]);
-        
-        //Ira mostrar uma messagem idicando qual foi o resultado da jogada
-        javax.swing.JOptionPane.showMessageDialog(TelaDeJogo.this,respostaDeEscolha[0]);
-      //  resulText.setText(escRes[0]);
+        processarJogada(4);
     }//GEN-LAST:event_spockMouseClicked
 
     private void lagartoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lagartoMouseExited
@@ -311,13 +297,7 @@ public class TelaDeJogo extends javax.swing.JPanel {
     private void lagartoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lagartoMouseClicked
         // TODO add your handling code here:
         TextJog.setText("Lagarto");
-        respostaDeEscolha = escolhaDoJogador.escolha(5);
-        TextMaq.setText(respostaDeEscolha[1]);
-        
-        //vamos verificar quem recebe pontos nessa jogada
-        verificaPontos(respostaDeEscolha[2]);
-        
-        javax.swing.JOptionPane.showMessageDialog(TelaDeJogo.this,respostaDeEscolha[0]);
+        processarJogada(5);
     }//GEN-LAST:event_lagartoMouseClicked
 
     private void pedraMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pedraMouseExited
@@ -333,19 +313,7 @@ public class TelaDeJogo extends javax.swing.JPanel {
     private void pedraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pedraMouseClicked
        
         TextJog.setText("Pedra");// irar indicar qual foi a escolha do usuário
-        
-        /* O programa irar comparar a escolha do jogador
-        // e a escolha da maquina então irar armazena
-        // as informaçoes processadas
-        respostaDeEscolha = escolhaDoJogador.escolha(1);
-        TextMaq.setText(respostaDeEscolha[1]);//O program irar informar a escolha da maquina
-        
-        //vamos verificar quem recebe pontos nessa jogada
-        verificaPontos(respostaDeEscolha[2]);
-        
-        //irar informar ao usuario o resultado da jogada
-        javax.swing.JOptionPane.showMessageDialog(TelaDeJogo.this,respostaDeEscolha[0]);
-        */
+               
         processarJogada(1);
     }//GEN-LAST:event_pedraMouseClicked
 
@@ -362,14 +330,8 @@ public class TelaDeJogo extends javax.swing.JPanel {
     private void papelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_papelMouseClicked
         // TODO add your handling code here:
         TextJog.setText("Papel");        
-        respostaDeEscolha = escolhaDoJogador.escolha(2);
-        TextMaq.setText(respostaDeEscolha[1]);
         
-        //vamos verificar quem recebe pontos nessa jogada
-        verificaPontos(respostaDeEscolha[2]);
-        
-        //Apresenta o resutado das jogadas
-        javax.swing.JOptionPane.showMessageDialog(TelaDeJogo.this,respostaDeEscolha[0]);
+        processarJogada(2);
     }//GEN-LAST:event_papelMouseClicked
    
     ModoDeJogo escolhaDoJogador;
