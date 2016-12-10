@@ -120,7 +120,7 @@ public class TelaDeMenu extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 56;
         gridBagConstraints.ipady = 20;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(46, 115, 0, 113);
+        gridBagConstraints.insets = new java.awt.Insets(46, 115, 0, 177);
         jMenu.add(conMaq, gridBagConstraints);
 
         modoDesafiante.setBackground(new java.awt.Color(102, 102, 255));
@@ -138,13 +138,13 @@ public class TelaDeMenu extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 44;
         gridBagConstraints.ipady = 18;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(60, 109, 0, 113);
+        gridBagConstraints.insets = new java.awt.Insets(60, 109, 0, 177);
         jMenu.add(modoDesafiante, gridBagConstraints);
 
         modoDesafiar.setBackground(new java.awt.Color(102, 102, 255));
         modoDesafiar.setFont(new java.awt.Font("Vineta BT", 2, 14)); // NOI18N
         modoDesafiar.setForeground(new java.awt.Color(51, 204, 255));
-        modoDesafiar.setText("Desafiar");
+        modoDesafiar.setText("Criar Desafios");
         modoDesafiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 modoDesafiarActionPerformed(evt);
@@ -153,17 +153,18 @@ public class TelaDeMenu extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
-        gridBagConstraints.ipadx = 158;
+        gridBagConstraints.ipadx = 94;
         gridBagConstraints.ipady = 35;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(65, 115, 99, 113);
+        gridBagConstraints.insets = new java.awt.Insets(65, 115, 99, 177);
         jMenu.add(modoDesafiar, gridBagConstraints);
 
         getContentPane().add(jMenu, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    //Quando o usuario for jogar contra a maquina esse metodo sera chamado
     private void conMaqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conMaqActionPerformed
         // TODO add your handling code here:
         jMenu.setVisible(false);
@@ -172,24 +173,27 @@ public class TelaDeMenu extends javax.swing.JFrame {
         Tela.setVisible(true);
         
     }//GEN-LAST:event_conMaqActionPerformed
-
+    
+    //Esse metodo irar ser chamado quando o usuario optar criar desafios
     private void modoDesafiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modoDesafiarActionPerformed
-        // TODO add your handling code here:
-        Tela = new TelaDeDesafio();
+        // Aqui a tela irar ser trocada, 
+        // que levara o usuario á tela de Desafios
+        Tela = new TelaDeDesafio();// criamos um objeto de TelaDesafio
         jMenu.setVisible(false);
-        add(Tela);
+        add(Tela); // adicionamos a um novo painel ao JFrame
         Tela.setVisible(true);
     }//GEN-LAST:event_modoDesafiarActionPerformed
     
+    // Esse metodo sera chamado quando quiser jogar contra o desafiante
     private void modoDesafianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modoDesafianteActionPerformed
-        // TODO add your handling code here:
+       
         jMenu.setVisible(false);
         Tela = new TelaDeJogo(new ContraDesafiante());
         add(Tela);
-        Tela.setVisible(true);
-        
+        Tela.setVisible(true);        
     }//GEN-LAST:event_modoDesafianteActionPerformed
-
+    
+    // Quando o usuario quiser sair do jogo
     private void sairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairActionPerformed
         // TODO add your handling code here:
         this.dispose();
@@ -244,7 +248,7 @@ public class TelaDeMenu extends javax.swing.JFrame {
         
         
     }
-    private JPanel Tela;
+    private JPanel Tela; //variavel que irar amarzena os paineis
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Menu;
     private javax.swing.JButton conMaq;

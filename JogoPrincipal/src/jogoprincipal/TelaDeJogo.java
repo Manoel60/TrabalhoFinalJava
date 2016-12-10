@@ -40,7 +40,7 @@ public class TelaDeJogo extends javax.swing.JPanel {
         lagarto = new javax.swing.JLabel();
         spock = new javax.swing.JLabel();
         tesoura = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jNomeMaq = new javax.swing.JLabel();
         player = new javax.swing.JLabel();
         TextMaq = new javax.swing.JTextField();
         TextJog = new javax.swing.JTextField();
@@ -137,7 +137,7 @@ public class TelaDeJogo extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(1, 52, 0, 0);
         jPanel3.add(tesoura, gridBagConstraints);
 
-        jLabel2.setText("    :Maquina");
+        jNomeMaq.setText("    :Maquina");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 5;
@@ -147,7 +147,7 @@ public class TelaDeJogo extends javax.swing.JPanel {
         gridBagConstraints.ipady = 6;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(20, 4, 58, 0);
-        jPanel3.add(jLabel2, gridBagConstraints);
+        jPanel3.add(jNomeMaq, gridBagConstraints);
 
         player.setText("Jogador:");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -331,15 +331,22 @@ public class TelaDeJogo extends javax.swing.JPanel {
     }//GEN-LAST:event_pedraMouseEntered
 
     private void pedraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pedraMouseClicked
-        // TODO add your handling code here:
-        TextJog.setText("Pedra");
+       
+        TextJog.setText("Pedra");// irar indicar qual foi a escolha do usuário
+        
+        /* O programa irar comparar a escolha do jogador
+        // e a escolha da maquina então irar armazena
+        // as informaçoes processadas
         respostaDeEscolha = escolhaDoJogador.escolha(1);
-        TextMaq.setText(respostaDeEscolha[1]);
+        TextMaq.setText(respostaDeEscolha[1]);//O program irar informar a escolha da maquina
         
         //vamos verificar quem recebe pontos nessa jogada
         verificaPontos(respostaDeEscolha[2]);
         
+        //irar informar ao usuario o resultado da jogada
         javax.swing.JOptionPane.showMessageDialog(TelaDeJogo.this,respostaDeEscolha[0]);
+        */
+        processarJogada(1);
     }//GEN-LAST:event_pedraMouseClicked
 
     private void papelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_papelMouseExited
@@ -374,8 +381,8 @@ public class TelaDeJogo extends javax.swing.JPanel {
     private javax.swing.JLabel Score;
     private javax.swing.JTextField TextJog;
     private javax.swing.JTextField TextMaq;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
+    public javax.swing.JLabel jNomeMaq;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -398,5 +405,20 @@ public class TelaDeJogo extends javax.swing.JPanel {
             scoreP++;
         }
         Score.setText(String.format("%d  X  %d",scoreP, scoreC));
+    }
+    
+    private void processarJogada(int jogada)
+    {
+        // O programa irar comparar a escolha do jogador
+        // e a escolha da maquina então irar armazena
+        // as informaçoes processadas
+        respostaDeEscolha = escolhaDoJogador.escolha(jogada);
+        TextMaq.setText(respostaDeEscolha[1]);//O program irar informar a escolha da maquina
+        
+        //vamos verificar quem recebe pontos nessa jogada
+        verificaPontos(respostaDeEscolha[2]);
+        
+        //irar informar ao usuario o resultado da jogada
+        javax.swing.JOptionPane.showMessageDialog(TelaDeJogo.this,respostaDeEscolha[0]);
     }
 }
