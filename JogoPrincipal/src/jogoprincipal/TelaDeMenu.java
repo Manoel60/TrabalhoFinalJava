@@ -28,7 +28,6 @@ public class TelaDeMenu extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         quadro2 = new javax.swing.JFrame();
         jPanel2 = new javax.swing.JPanel();
@@ -55,7 +54,7 @@ public class TelaDeMenu extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(600, 400));
         setMinimumSize(new java.awt.Dimension(600, 400));
 
-        jPanel2.setBackground(new java.awt.Color(0, 153, 255));
+        jPanel2.setBackground(new java.awt.Color(105, 105, 105));
         jPanel2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
         Menu.setBackground(new java.awt.Color(0, 204, 255));
@@ -67,7 +66,6 @@ public class TelaDeMenu extends javax.swing.JFrame {
         });
 
         sair.setBackground(new java.awt.Color(0, 204, 255));
-        sair.setForeground(new java.awt.Color(51, 51, 51));
         sair.setText("Sair");
         sair.setBorder(null);
         sair.setBorderPainted(false);
@@ -102,62 +100,65 @@ public class TelaDeMenu extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.WEST);
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
-        jPanel1.setLayout(new java.awt.GridBagLayout());
+        jPanel1.setBackground(new java.awt.Color(255, 140, 0));
 
         conMaq.setBackground(new java.awt.Color(102, 102, 255));
         conMaq.setFont(new java.awt.Font("Vineta BT", 2, 14)); // NOI18N
-        conMaq.setForeground(new java.awt.Color(51, 204, 255));
+        conMaq.setForeground(new java.awt.Color(255, 140, 0));
         conMaq.setText("Contra a Maquina");
         conMaq.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 conMaqActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.ipadx = 56;
-        gridBagConstraints.ipady = 20;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(46, 115, 0, 113);
-        jPanel1.add(conMaq, gridBagConstraints);
 
         modoDesafiante.setBackground(new java.awt.Color(102, 102, 255));
         modoDesafiante.setFont(new java.awt.Font("Vineta BT", 2, 14)); // NOI18N
-        modoDesafiante.setForeground(new java.awt.Color(51, 204, 255));
+        modoDesafiante.setForeground(new java.awt.Color(255, 140, 0));
         modoDesafiante.setText("Contra o Desafiante");
         modoDesafiante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 modoDesafianteActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = 44;
-        gridBagConstraints.ipady = 18;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(60, 109, 0, 113);
-        jPanel1.add(modoDesafiante, gridBagConstraints);
 
         modoDesafiar.setBackground(new java.awt.Color(102, 102, 255));
         modoDesafiar.setFont(new java.awt.Font("Vineta BT", 2, 14)); // NOI18N
-        modoDesafiar.setForeground(new java.awt.Color(51, 204, 255));
+        modoDesafiar.setForeground(new java.awt.Color(255, 140, 0));
         modoDesafiar.setText("Desafiar");
         modoDesafiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 modoDesafiarActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.ipadx = 158;
-        gridBagConstraints.ipady = 35;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(65, 115, 99, 113);
-        jPanel1.add(modoDesafiar, gridBagConstraints);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(139, 139, 139)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(modoDesafiante, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(conMaq, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(119, 119, 119)
+                        .addComponent(modoDesafiar, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(157, 157, 157))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addComponent(modoDesafiante, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60)
+                .addComponent(conMaq, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(75, 75, 75)
+                .addComponent(modoDesafiar, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
