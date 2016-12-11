@@ -10,7 +10,7 @@ package jogoprincipal;
  * @author Manoel
  */
 public class ContraDesafiante implements ModoDeJogo {
-    @Override
+    @Override 
     public String[] escolha(int x) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

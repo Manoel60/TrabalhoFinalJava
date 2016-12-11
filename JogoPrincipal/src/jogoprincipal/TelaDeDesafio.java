@@ -15,6 +15,8 @@ public class TelaDeDesafio extends javax.swing.JPanel {
      * Creates new form Desafiar
      */
     public TelaDeDesafio() {
+        String nome = javax.swing.JOptionPane.showInputDialog(this,"Digite seu nome");
+        
         initComponents();
     }
 
@@ -27,53 +29,95 @@ public class TelaDeDesafio extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        gp = new javax.swing.ButtonGroup();
         jButton3 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        quntidade = new javax.swing.JTextField();
+        op1 = new javax.swing.JRadioButton();
+        op2 = new javax.swing.JRadioButton();
+        op3 = new javax.swing.JRadioButton();
+
+        gp.add(op1);
+        gp.add(op2);
+        gp.add(op3);
 
         setBackground(new java.awt.Color(108, 167, 167));
 
         jButton3.setBackground(new java.awt.Color(108, 167, 167));
         jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Manoel\\Documents\\men.png")); // NOI18N
 
-        jButton1.setBackground(new java.awt.Color(0, 102, 102));
-        jButton1.setFont(new java.awt.Font("Tahoma", 3, 36)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 0, 51));
-        jButton1.setText("Em Construção...");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton2.setText("jButton2");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton2ActionPerformed(evt);
             }
         });
+
+        quntidade.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        quntidade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                quntidadeActionPerformed(evt);
+            }
+        });
+
+        op1.setEnabled(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(69, 69, 69)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(44, 44, 44))
+                        .addComponent(quntidade, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(82, 82, 82)
+                        .addComponent(jButton2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(op1)
+                        .addGap(18, 18, 18)
+                        .addComponent(op2)
+                        .addGap(28, 28, 28)
+                        .addComponent(op3)))
+                .addContainerGap(236, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(51, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54)
-                .addComponent(jButton3))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(89, 89, 89)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(quntidade, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 138, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(op1)
+                    .addComponent(op2)
+                    .addComponent(op3))
+                .addGap(20, 20, 20)
+                .addComponent(jButton3)
+                .addGap(5, 5, 5))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        op1.setEnabled(true);
+       javax.swing.JOptionPane.showMessageDialog(this,quntidade.getText());
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void quntidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quntidadeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_quntidadeActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.ButtonGroup gp;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JRadioButton op1;
+    private javax.swing.JRadioButton op2;
+    private javax.swing.JRadioButton op3;
+    private javax.swing.JTextField quntidade;
     // End of variables declaration//GEN-END:variables
 }
