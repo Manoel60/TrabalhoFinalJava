@@ -20,6 +20,8 @@ public class TelaDeJogo extends javax.swing.JPanel {
      * Creates new form ContraMaq
      */
     public TelaDeJogo(ModoDeJogo esc) {
+        //this.imgPedra2 = new ImageIcon(getClass().getResource("p_2.png"));
+        //this.imgPedra1   = new ImageIcon(getClass().getResource("/iMAGES/p_1.png"));
         escolhaDoJogador =esc;
         initComponents();
     }
@@ -56,7 +58,7 @@ public class TelaDeJogo extends javax.swing.JPanel {
         jPanel3.setPreferredSize(new java.awt.Dimension(237, 272));
         jPanel3.setLayout(new java.awt.GridBagLayout());
 
-        pedra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/p_1.png"))); // NOI18N
+        pedra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogoprincipal/p_1.png"))); // NOI18N
         pedra.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pedra.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -76,7 +78,7 @@ public class TelaDeJogo extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(11, 18, 0, 0);
         jPanel3.add(pedra, gridBagConstraints);
 
-        lagarto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/lg1.png"))); // NOI18N
+        lagarto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogoprincipal/iMAGES/lg1.png"))); // NOI18N
         lagarto.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lagarto.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -96,7 +98,7 @@ public class TelaDeJogo extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(6, 18, 0, 0);
         jPanel3.add(lagarto, gridBagConstraints);
 
-        spock.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/sp1.png"))); // NOI18N
+        spock.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogoprincipal/iMAGES/sp1.png"))); // NOI18N
         spock.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         spock.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -116,7 +118,7 @@ public class TelaDeJogo extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(1, 18, 0, 0);
         jPanel3.add(spock, gridBagConstraints);
 
-        tesoura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/t1.png"))); // NOI18N
+        tesoura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogoprincipal/iMAGES/t1.png"))); // NOI18N
         tesoura.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tesoura.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -217,7 +219,7 @@ public class TelaDeJogo extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(12, 18, 0, 10);
         jPanel3.add(jPanel2, gridBagConstraints);
 
-        papel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/pp1.png"))); // NOI18N
+        papel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogoprincipal/iMAGES/pp1.png"))); // NOI18N
         papel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         papel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -322,12 +324,12 @@ public class TelaDeJogo extends javax.swing.JPanel {
 
     private void pedraMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pedraMouseExited
         // TODO add your handling code here:
-        pedra.setIcon(img1);
+        pedra.setIcon(imgPedra1);
     }//GEN-LAST:event_pedraMouseExited
 
     private void pedraMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pedraMouseEntered
         // TODO add your handling code here:
-        pedra.setIcon(img2);
+        pedra.setIcon(imgPedra2);
     }//GEN-LAST:event_pedraMouseEntered
 
     private void pedraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pedraMouseClicked
@@ -368,8 +370,8 @@ public class TelaDeJogo extends javax.swing.JPanel {
     ModoDeJogo escolhaDoJogador;
     String[] respostaDeEscolha;
     private int scoreP=0, scoreC= 0;
-    private Icon img2 = new ImageIcon(getClass().getResource("/iMAGES/p_2.png"));
-    private Icon img1 = new ImageIcon(getClass().getResource("/iMAGES/p_1.png"));
+    private Icon imgPedra2;
+    private Icon imgPedra1;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Score;
     private javax.swing.JTextField TextJog;

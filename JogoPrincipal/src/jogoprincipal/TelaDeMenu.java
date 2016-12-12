@@ -167,7 +167,7 @@ public class TelaDeMenu extends javax.swing.JFrame {
     private void conMaqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conMaqActionPerformed
         // TODO add your handling code here:
         jPanel1.setVisible(false);
-        Tela = new TelaDeJogo(new ContraMaquina());
+        Tela = new Teste();//new TelaDeJogo(new ContraMaquina());
         add(Tela);
         Tela.setVisible(true);
         
