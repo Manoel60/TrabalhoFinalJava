@@ -21,6 +21,7 @@ public class ContraMaquina extends JPanel implements ModoDeJogo{
                              TESOURA=3,
                              SPOCK=4,
                              LAGARTO=5;
+    //metodo
     @Override
     public String[] escolha(int escolhaJog) {
         

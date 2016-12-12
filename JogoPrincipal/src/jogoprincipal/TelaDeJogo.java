@@ -20,8 +20,6 @@ public class TelaDeJogo extends javax.swing.JPanel {
      * Creates new form ContraMaq
      */
     public TelaDeJogo(ModoDeJogo esc) {
-        //this.imgPedra2 = new ImageIcon(getClass().getResource("p_2.png"));
-        //this.imgPedra1   = new ImageIcon(getClass().getResource("/iMAGES/p_1.png"));
         escolhaDoJogador =esc;
         initComponents();
     }
@@ -58,7 +56,7 @@ public class TelaDeJogo extends javax.swing.JPanel {
         jPanel3.setPreferredSize(new java.awt.Dimension(237, 272));
         jPanel3.setLayout(new java.awt.GridBagLayout());
 
-        pedra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogoprincipal/p_1.png"))); // NOI18N
+        pedra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/p_1.png"))); // NOI18N
         pedra.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pedra.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -78,7 +76,7 @@ public class TelaDeJogo extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(11, 18, 0, 0);
         jPanel3.add(pedra, gridBagConstraints);
 
-        lagarto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogoprincipal/iMAGES/lg1.png"))); // NOI18N
+        lagarto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/lg1.png"))); // NOI18N
         lagarto.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lagarto.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -98,7 +96,7 @@ public class TelaDeJogo extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(6, 18, 0, 0);
         jPanel3.add(lagarto, gridBagConstraints);
 
-        spock.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogoprincipal/iMAGES/sp1.png"))); // NOI18N
+        spock.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/sp1.png"))); // NOI18N
         spock.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         spock.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -118,7 +116,7 @@ public class TelaDeJogo extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(1, 18, 0, 0);
         jPanel3.add(spock, gridBagConstraints);
 
-        tesoura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogoprincipal/iMAGES/t1.png"))); // NOI18N
+        tesoura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/t1.png"))); // NOI18N
         tesoura.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tesoura.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -219,7 +217,7 @@ public class TelaDeJogo extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(12, 18, 0, 10);
         jPanel3.add(jPanel2, gridBagConstraints);
 
-        papel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jogoprincipal/iMAGES/pp1.png"))); // NOI18N
+        papel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/pp1.png"))); // NOI18N
         papel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         papel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -256,70 +254,50 @@ public class TelaDeJogo extends javax.swing.JPanel {
 
     private void tesouraMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tesouraMouseExited
         // TODO add your handling code here:
-        tesoura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/t1.png")));
+        tesoura.setIcon(imgTesoura1);
     }//GEN-LAST:event_tesouraMouseExited
 
     private void tesouraMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tesouraMouseEntered
         // TODO add your handling code here:
-        tesoura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/t2.png")));
+        tesoura.setIcon(imgTesoura2);
     }//GEN-LAST:event_tesouraMouseEntered
 
     private void tesouraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tesouraMouseClicked
         // TODO add your handling code here:
         TextJog.setText("Tesoura");
-        respostaDeEscolha = escolhaDoJogador.escolha(3);
-        TextMaq.setText(respostaDeEscolha[1]);
-        
-        //vamos verificar quem recebe pontos nessa jogada
-        verificaPontos(respostaDeEscolha[2]);
-        
-        javax.swing.JOptionPane.showMessageDialog(TelaDeJogo.this,respostaDeEscolha[0]);
+        processarJogo(3);
     }//GEN-LAST:event_tesouraMouseClicked
 
     private void spockMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_spockMouseExited
         // TODO add your handling code here:
-        spock.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/sp1.png")));
+        spock.setIcon(imgSpock1);
     }//GEN-LAST:event_spockMouseExited
 
     private void spockMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_spockMouseEntered
         // TODO add your handling code here:
-        spock.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/sp2.png")));
+        spock.setIcon(imgSpock2);
     }//GEN-LAST:event_spockMouseEntered
 
     private void spockMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_spockMouseClicked
         // TODO add your handling code here:
         TextJog.setText("SPOOK!");
-        respostaDeEscolha = escolhaDoJogador.escolha(4);
-        TextMaq.setText(respostaDeEscolha[1]);
-        
-        //vamos verificar quem recebe pontos nessa jogada
-        verificaPontos(respostaDeEscolha[2]);
-        
-        //Ira mostrar uma messagem idicando qual foi o resultado da jogada
-        javax.swing.JOptionPane.showMessageDialog(TelaDeJogo.this,respostaDeEscolha[0]);
-      //  resulText.setText(escRes[0]);
+        processarJogo(4);
     }//GEN-LAST:event_spockMouseClicked
 
     private void lagartoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lagartoMouseExited
         // TODO add your handling code here:
-        lagarto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/lg1.png")));
+        lagarto.setIcon(imgLagarto1);
     }//GEN-LAST:event_lagartoMouseExited
 
     private void lagartoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lagartoMouseEntered
         // TODO add your handling code here:
-        lagarto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/lg2.png")));
+        lagarto.setIcon(imgLagarto2);
     }//GEN-LAST:event_lagartoMouseEntered
 
     private void lagartoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lagartoMouseClicked
         // TODO add your handling code here:
         TextJog.setText("Lagarto");
-        respostaDeEscolha = escolhaDoJogador.escolha(5);
-        TextMaq.setText(respostaDeEscolha[1]);
-        
-        //vamos verificar quem recebe pontos nessa jogada
-        verificaPontos(respostaDeEscolha[2]);
-        
-        javax.swing.JOptionPane.showMessageDialog(TelaDeJogo.this,respostaDeEscolha[0]);
+        processarJogo(5);
     }//GEN-LAST:event_lagartoMouseClicked
 
     private void pedraMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pedraMouseExited
@@ -335,43 +313,38 @@ public class TelaDeJogo extends javax.swing.JPanel {
     private void pedraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pedraMouseClicked
         // TODO add your handling code here:
         TextJog.setText("Pedra");
-        respostaDeEscolha = escolhaDoJogador.escolha(1);
-        TextMaq.setText(respostaDeEscolha[1]);
-        
-        //vamos verificar quem recebe pontos nessa jogada
-        verificaPontos(respostaDeEscolha[2]);
-        
-        javax.swing.JOptionPane.showMessageDialog(TelaDeJogo.this,respostaDeEscolha[0]);
+        processarJogo(1);
     }//GEN-LAST:event_pedraMouseClicked
 
     private void papelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_papelMouseExited
         // TODO add your handling code here:
-        papel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/pp1.png")));
+        papel.setIcon(imgPapel1);
     }//GEN-LAST:event_papelMouseExited
 
     private void papelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_papelMouseEntered
         // Quando o mouse entrar na area do label
-        papel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iMAGES/pp2.png")));
+        papel.setIcon(imgPapel2);
     }//GEN-LAST:event_papelMouseEntered
 
     private void papelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_papelMouseClicked
         // TODO add your handling code here:
         TextJog.setText("Papel");        
-        respostaDeEscolha = escolhaDoJogador.escolha(2);
-        TextMaq.setText(respostaDeEscolha[1]);
-        
-        //vamos verificar quem recebe pontos nessa jogada
-        verificaPontos(respostaDeEscolha[2]);
-        
-        //Apresenta o resutado das jogadas
-        javax.swing.JOptionPane.showMessageDialog(TelaDeJogo.this,respostaDeEscolha[0]);
+        processarJogo(2);
     }//GEN-LAST:event_papelMouseClicked
    
     ModoDeJogo escolhaDoJogador;
     String[] respostaDeEscolha;
     private int scoreP=0, scoreC= 0;
-    private Icon imgPedra2;
-    private Icon imgPedra1;
+    private Icon imgPedra2 = new ImageIcon(getClass().getResource("/iMAGES/p_2.png"));
+    private Icon imgPedra1 = new ImageIcon(getClass().getResource("/iMAGES/p_1.png"));
+    private Icon imgPapel1 = new ImageIcon(getClass().getResource("/iMAGES/pp1.png"));
+    private Icon imgPapel2 = new ImageIcon(getClass().getResource("/iMAGES/pp2.png"));
+    private Icon imgTesoura1 = new ImageIcon(getClass().getResource("/iMAGES/t1.png"));
+    private Icon imgTesoura2 = new ImageIcon(getClass().getResource("/iMAGES/t2.png"));
+    private Icon imgLagarto1 = new ImageIcon(getClass().getResource("/iMAGES/lg1.png"));
+    private Icon imgLagarto2 = new ImageIcon(getClass().getResource("/iMAGES/lg2.png"));
+    private Icon imgSpock1 = new ImageIcon(getClass().getResource("/iMAGES/sp1.png"));
+    private Icon imgSpock2 = new ImageIcon(getClass().getResource("/iMAGES/sp2.png"));
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Score;
     private javax.swing.JTextField TextJog;
@@ -391,7 +364,7 @@ public class TelaDeJogo extends javax.swing.JPanel {
     
     //Essa Classe irar verificar quem irar receber os pontos da jogada
     private void verificaPontos(String quemRecebeP) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
         if (quemRecebeP == "1")
         {
             scoreC++;
@@ -400,5 +373,19 @@ public class TelaDeJogo extends javax.swing.JPanel {
             scoreP++;
         }
         Score.setText(String.format("%d  X  %d",scoreP, scoreC));
+    }
+    
+    //Esse metodo irar processar a jogada e mostrara os resultados
+    public void processarJogo(int jogada)
+    {
+        respostaDeEscolha = escolhaDoJogador.escolha(jogada);
+       
+        TextMaq.setText(respostaDeEscolha[1]);
+        
+        //vamos verificar quem recebe pontos nessa jogada
+        verificaPontos(respostaDeEscolha[2]);
+        
+        //Apresenta o resutado das jogadas
+        javax.swing.JOptionPane.showMessageDialog(TelaDeJogo.this,respostaDeEscolha[0]);
     }
 }

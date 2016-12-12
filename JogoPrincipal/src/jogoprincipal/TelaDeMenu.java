@@ -5,6 +5,9 @@
  */
 package jogoprincipal;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JPanel;
 
 /**
@@ -106,8 +109,7 @@ public class TelaDeMenu extends javax.swing.JFrame {
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
         conMaq.setBackground(new java.awt.Color(102, 102, 255));
-        conMaq.setFont(new java.awt.Font("Vineta BT", 2, 14)); // NOI18N
-        conMaq.setForeground(new java.awt.Color(51, 204, 255));
+        conMaq.setFont(new java.awt.Font("Bookman Old Style", 1, 14)); // NOI18N
         conMaq.setText("Contra a Maquina");
         conMaq.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -124,7 +126,7 @@ public class TelaDeMenu extends javax.swing.JFrame {
         jPanel1.add(conMaq, gridBagConstraints);
 
         modoDesafiante.setBackground(new java.awt.Color(102, 102, 255));
-        modoDesafiante.setFont(new java.awt.Font("Vineta BT", 2, 14)); // NOI18N
+        modoDesafiante.setFont(new java.awt.Font("Bookman Old Style", 1, 14)); // NOI18N
         modoDesafiante.setForeground(new java.awt.Color(51, 204, 255));
         modoDesafiante.setText("Contra o Desafiante");
         modoDesafiante.addActionListener(new java.awt.event.ActionListener() {
@@ -142,8 +144,7 @@ public class TelaDeMenu extends javax.swing.JFrame {
         jPanel1.add(modoDesafiante, gridBagConstraints);
 
         modoDesafiar.setBackground(new java.awt.Color(102, 102, 255));
-        modoDesafiar.setFont(new java.awt.Font("Vineta BT", 2, 14)); // NOI18N
-        modoDesafiar.setForeground(new java.awt.Color(51, 204, 255));
+        modoDesafiar.setFont(new java.awt.Font("Bookman Old Style", 1, 14)); // NOI18N
         modoDesafiar.setText("Desafiar");
         modoDesafiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,15 +168,19 @@ public class TelaDeMenu extends javax.swing.JFrame {
     private void conMaqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conMaqActionPerformed
         // TODO add your handling code here:
         jPanel1.setVisible(false);
-        Tela = new Teste();//new TelaDeJogo(new ContraMaquina());
+        Tela = new TelaDeJogo(new ContraMaquina());
         add(Tela);
         Tela.setVisible(true);
         
     }//GEN-LAST:event_conMaqActionPerformed
 
     private void modoDesafiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modoDesafiarActionPerformed
-        // TODO add your handling code here:
-        Tela = new TelaDeDesafio();
+        try {
+            // TODO add your handling code here:
+            Tela = new TelaDeDesafio();
+        } catch (IOException ex) {
+            Logger.getLogger(TelaDeMenu.class.getName()).log(Level.SEVERE, null, ex);
+        }
         jPanel1.setVisible(false);
         add(Tela);
         Tela.setVisible(true);
